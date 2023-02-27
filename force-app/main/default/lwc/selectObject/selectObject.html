@@ -1,0 +1,21 @@
+<template>
+    <lightning-card  >
+     <lightning-combobox
+         name="List Of Object"
+         label="Select Object"
+         value={value}
+         placeholder="Select your object......."
+         options={options}
+         onchange={handleChange} ></lightning-combobox>
+    </lightning-card>
+    <div class="slds-grid slds-gutters">
+        <template if:true={handleobjectapi}>
+            <div class="slds-col">
+            <c-object-form obj={objName}></c-object-form>
+            </div>
+            <div class="slds-col">
+            <c-object-list obj={objName}></c-object-list>
+            </div>
+        </template>
+    </div>
+   </template>
