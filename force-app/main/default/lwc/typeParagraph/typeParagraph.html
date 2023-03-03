@@ -1,0 +1,43 @@
+<template>
+    <lightning-card>
+        <div class="slds-align_absolute-center">
+            <div class="slds-text-heading_large">
+            <h2><b>TYPING TEST</b></h2>
+        </div>
+        </div>
+        <lightning-card title="Script To Test">
+            <div class="slds-box">
+                <p><b>{mainArr}</b></p> 
+            </div>
+        </lightning-card>
+
+        <lightning-card title="User Script">
+            <div class="slds-box">
+                <lightning-input disabled={disable} onchange={handleInputChange}></lightning-input>
+            </div>
+        </lightning-card>
+        <lightning-card>
+            <div class="slds-align_absolute-center" >
+                <div class="slds-text-heading_large">
+                <h2><b>Performance</b></h2>
+                </div>
+            </div>
+            </br>
+            <div><b>
+                <div style="width:100%; height: 20px; background-color: grey;">
+                    <div style="width: 25%; float:left; margin: 0px; background-color: rgb(244, 87, 87);">Error:{error} </div>
+                    <div style="width: 25%; float:left; margin: 0px; background-color: rgb(245, 182, 65);"> Time: {time}</div>
+                    <div style="width: 25%; float:left; margin: 0px; background-color: rgb(106, 242, 106);">Accuracy : {Accuracy} %</div>
+                    <div style="width: 25%; float:left; margin: 0px; background-color: lightblue;">WPM:{wordPerMin}</div>
+                </div>    
+               
+                </b>
+            </div>
+            </br>
+            </lightning-card>
+            <div class="slds-align_absolute-center" >
+            <lightning-button variant="brand" label="Submit" onclick={handleClick}></lightning-button>
+        </div>
+        </lightning-card>
+    </lightning-card>
+</template>
